@@ -1,0 +1,40 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3729
+
+    galaxy is a colorscheme that generate schemes with colors.
+
+    With this you can:
+        Get your preferred colorscheme in a simplest way.
+            1.Input your scheme name
+            2.Choose your preferred color for background.
+        You got it.
+
+    With this you get:
+        5 built-in schemes.
+        1-color-to-scheme generator.
+        5-color to tune your schemes.
+        100+ schemes generate simply with colorname-list.
+
+        And...
+        Terminal (256/16/8) support with all schemes.
+        Insert-mode statusline hightlight.
+        Tab/Fold/Popmenu/Wild Menu/... with comfort balance.
+        Synatax colors with distinct contrast.
+        Diff colors clearly shows the diff texts.
+        ...
+
+    Take a glance: 
+        Built-in schemes:
+            in GUI          http://i55.tinypic.com/u0qh2.png
+            in TERM(256)    http://i56.tinypic.com/2nr234y.png
+        Galaxy window:      http://i56.tinypic.com/153rzgp.png
+
+    Where to start:     
+        :colorscheme galaxy
+        :Galaxy
+
+
+    NOTE: require vim plugin:ColorV
+          http://www.vim.org/scripts/script.php?script_id=3597 
+    NOTE: If you have built a nice scheme and want to share it.
+          Post it at https://github.com/Rykka/vim-galaxy/issues 
+

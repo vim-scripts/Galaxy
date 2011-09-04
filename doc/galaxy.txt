@@ -1,0 +1,217 @@
+*galaxy.txt* *galaxy*          Galaxy            Generate schemes with colors
+                                          
+  
+                     ______      __                                    ~
+                    / ____/___ _/ /___ __  ____  __                    ~
+                   / / __/ __ `/ / __ `/ |/_/ / / /                    ~
+                  / /_/ / /_/ / / /_/ />  </ /_/ /                     ~
+                  \____/\__,_/_/\__,_/_/|_|\__, /                      ~
+                                          /____/                       ~
+                             ver:1.0                                   ~
+
+------------------------------------------------------------------------------
+CONTENTS                                         *galaxy-contents*
+1. Intro                                         |galaxy-intro|
+2. Install                                       |galaxy-install|
+3. Commands                                      |galaxy-commands|
+4. Developer                                     |galaxy-developer|
+==============================================================================
+INTRO                                               *galaxy-intro*
+
+    *galaxy* is a vim colorscheme that generate schemes with colors.
+
+    With this you can:
+        Simply get your desired colorscheme. 
+
+    With this you get:
+        5 built-in schemes.
+        Generate scheme with only one color.
+        Edit schemes in 5 colors.
+        Simply generate 100+ schemes with colorname-list.
+        Terminal (256/16/8) support with all schemes.
+        StatusLine highlight with insert-enter.
+        Clearly diff mode color.
+        ...
+
+    Take a glance: 
+        GUI  http://i55.tinypic.com/u0qh2.png
+        TERM http://i56.tinypic.com/2nr234y.png
+
+    Where to start:     
+        :colorscheme galaxy
+        :Galaxy
+    
+------------------------------------------------------------------------------
+QUICKSTART                                          *galaxy-quickstart*
+
+    Load galaxy~
+        :colorscheme galaxy
+
+    Open galaxy manager window~
+        <leader>gll or :Galaxy
+
+        Then you can choose/edit/generate/delete schemes in it.
+
+    Generate new schemes~
+        'gn'
+        Input your scheme's name.
+        Then choose a color as the schemes background. then press 'q'
+        To quit the choosing window. The schemes auto generated.
+        And you will got your scheme loaded immediately.
+
+    Edit your schemes~
+        Move cursor on the color you want to edit. 
+        Then press 'e'
+        Then choose your desired color for it.
+        Press 'q' to quit the window. 
+        And you will got the changed scheme loaded immediately.
+
+    Generate schemes with colorlist~
+        <leader>cl or :ColorVlist
+        You will see a colorlist window opened with W3C standard colorname.
+        Put cursor in it. Then press '<leader>gla'
+        All the colorlist in it will be generated to schemes.
+        Now you got 100+ schemes.
+        Colorlist like 'COLORNAME #ffffff' will be processed.
+
+    Delete schemes~
+        move cursor in the galaxy window. 
+        press 'dd'.
+        The scheme will be deleted.
+    
+    With Terminal~
+        If it does not work correctly.
+        You should check your '&t_Co' option.
+        And set 'g:galaxy_term_color' to the number it support.
+
+    NOTE    Your previous_scheme is cached on your disk.
+            And gui scheme is seperated with terminal.
+            So you can set them with different scheme.
+
+    NOTE    Terminal scheme in 8/16 terminal color is predefined.
+
+    NOTE    Terminal cursor may have bugs. 
+            And only support "xterm\rxvt\screen\TMUX" now.
+==============================================================================
+INSTALL                                          *galaxy-install*
+
+1.Using [Vundle.vim](Recommend):~
+    https://github.com/gmarik/vundle
+    After installed vundle and git. Add this line to your vimrc  
+    `Bundle 'Rykka/vim-galaxy'` 
+    `Bundle 'Rykka/ColorV'` 
+    Run `:BundleInstall` to install.
+    And update ColorV easily by `:BundleInstall!`
+ 
+2.Using [Galaxy on Vim.org]~
+    You should download latest 'ColorV' at first.
+    http://www.vim.org/scripts/script.php?script_id=3597
+    http://www.vim.org/scripts/script.php?script_id=3597
+    Download the latest version of tar.gz file, 
+    Extract to $VIMFILE folder. 
+    ("~/.vim" for linux. "$HOME/vimfiles" for windows)
+    Generate helptags. `:helptags ~/.vim/doc
+    
+    NOTE   Remember to install vim plugin 'ColorV' as forementioned.
+
+    NOTE   You can always get the latest version at
+           https://github.com/Rykka/vim-galaxy/
+           And you can report bugs and suggestions at
+           https://github.com/Rykka/vim-galaxy/issues 
+==============================================================================
+COMMANDS                                              *galaxy-commands*
+    <leader>gll or :Galaxy              Open galaxy window.
+    <leader>gln or :GalaxyNext          Next galaxy scheme.
+    <leader>glp or :GalaxyPrev          Prev galaxy scheme.
+    <leader>gla or :GalaxyGen           Generate schemes with color-list in
+                                        buffer. 'COLORNAME  #ffffff'
+
+OPTIONS                                               *galaxy-options*
+                                        
+    g:galaxy_term_color                 default:0
+                                        Set the '&t_Co' to the number.
+
+    g:galaxy_term_check                 default:1
+                                        Check and guess '&t_Co' option
+                                        automaticlly.
+==============================================================================
+DEVELOPER                                             *galaxy-developer*
+
+    |Galaxy| is develped by Rykka Krin |<Rykka.Krin(at)gmail.com>|.
+   
+------------------------------------------------------------------------------
+HISTORY                                               *galaxy-history*
+"1.0.0
+" DONE: 110902  error of background lightness output 
+" DONE: 110901  add guisp for undercurl
+" DONE: 110829  use yiq_list_gen to define syntax/msg/dif colors
+" DONE: 110820  1! color => 5 color
+" DONE: 110819  add more hue in difclr
+" DONE: 110815  use ColorV picker
+" DONE: 110809  presistence files write with command
+" DONE: 110809  the file sequence maybe different
+" DONE: 110809  load by s:cache_name 
+" DONE: 110809  load theme with specified name
+" DONE: 110809  the background-colored color is too little. add bgrhue
+                it's hue to background
+" DONE: 110808  pcterm/xterm/cygwin... support
+" DONE: 110808  set with presistence file
+" DONE: 110805  deprecating using g:. using serialzd file instead.
+" DONE: 110805  show scheme list
+"FIXED: 110803  reload error E127 "seems set background will reload the
+                colorscheme.  " unlet it or colorscheme will be reloaded.
+" DONE: 110803  presisitence of the s:num which will load it last time " let
+                s:num = exists("g:GALAXY_THEME_NUM") ? g:GALAXY_THEME_NUM
+                : 0 " it's not defined when colorscheme loaded!  " use cache
+                instead?
+" DONE: 110804  let the insert mode with themes
+" DONE: 110804  let s:list_insert_leave auto copy the current scheme
+" DONE: 110804  theme could use schemes 
+" DONE: 110804  add the g:galaxy_usr_dict and execute it
+" DONE: 110804  load cache and g: highlights and themes
+"WKRND: 110804  echom will show mes box when vim start.
+" DONE: 110804  presistence file load
+" DONE: 110804  change the sequence of  the colors to  fg syn ech
+                bg dif
+" DONE: 110804  color name with dict
+" DONE: 110804  hl Themes  [shadowing,  coloring]
+" DONE: 110803  store it in cache or it would not load when starting " Don't
+                let it be mixed with g:
+" DONE: 110803  " Quick switch style key mapping.
+" DONE: 110803  " one function with link and highlight
+" DONE: 110803  store it in cache or it would not load when starting " Don't
+                let it be mixed with g:
+" DONE: 110803  " Quick switch style key mapping.
+" DONE: 110803  " one function with link and highlight
+" DONE: 110731  statusline color define in one place " guifg=NONE and 'null'
+                define of guifg(that will suceed previous value )
+" DONE: 110731  set background will reload the colorscheme.  switch with usr's
+                theme list
+" DONE: 110731  switch with keymapping
+" DONE: 110728  cterm support with colormath python 
+" DONE: 110728  calculate fg/bg_txt for terminal
+------------------------------------------------------------------------------
+LICENSE                                               *galaxy-license*
+
+    Copyright 2011 Rykka Krn. All rights reserved.
+    MIT license  {{{
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    }}}
+==============================================================================
+vim:tw=78:ft=help:
