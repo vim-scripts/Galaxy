@@ -1,30 +1,50 @@
 ##INTRO##
 **galaxy** is a vim colorscheme that generate schemes with colors.
     
-    With this you can:
-        Simply get your desired colorscheme. 
+* With this you can:
 
-    With this you get:
+        Get your preferred colorscheme in a simplest way.
+            1.Input your scheme name
+            2.Choose your preferred color for background.
+        You got it.
+
+* With this you get:
+
         5 built-in schemes.
-        Generate scheme with only one color.
-        Edit schemes in 5 colors.
-        Simply generate 100+ schemes with colorname-list.
+        1-color-to-scheme generator.
+        5-color to tune your schemes.
+        100+ schemes generate simply with colorname-list.
+        A window to choose schemes easily.
+
+        And...
         Terminal (256/16/8) support with all schemes.
-        StatusLine highlight with insert-enter.
-        Clearly color for diff mode.
+        Insert-mode statusline hightlight.
+        Tab/Fold/Popmenu/Wild Menu/... with comfort balance.
+        Synatax colors with distinct contrast.
+        Diff colors clearly shows the diff texts.
         ...
 
 **Take a glance:** 
 
-   GUI  http://i55.tinypic.com/u0qh2.png
+    Built-in Themes:
 
-   TERM http://i56.tinypic.com/2nr234y.png
+* in GUI          ![http://i55.tinypic.com/u0qh2.png](http://i55.tinypic.com/u0qh2.png)
+
+* in TERM(256)    http://i56.tinypic.com/2nr234y.png
+
+* Galaxy window   http://i56.tinypic.com/153rzgp.png
+   
 
 **where to start:**
 
         :colorscheme galaxy
         :Galaxy
 
+**NOTE**: require vim plugin:ColorV
+
+**NOTE**: If you have built a nice scheme and want to share it.
+
+          Post it at https://github.com/Rykka/vim-galaxy/issues 
 ##Use:##
 Load galaxy~
 
@@ -88,6 +108,10 @@ With Terminal~
 
             Terminal cursor may have bugs. 
             And only support "xterm\rxvt\screen\TMUX" now.
+            If Term color not work properly.
+            Please report your [OS,vim version,&t_Co,&term]
+            at https://github.com/Rykka/vim-galaxy/issues 
+
 
 ##Install:##
 1.Using [Vundle.vim](https://github.com/gmarik/vundle) (Recommend):~
@@ -101,14 +125,14 @@ After installed vundle and git. Add this line to your vimrc
 
 Run `:BundleInstall` to install.
 
-And update ColorV easily by `:BundleInstall!`
+And update them easily by `:BundleInstall!`
  
 2.Using [Galaxy on Vim.org](http://www.vim.org/scripts/script.php?script_id=3597)~
  
 You should download latest [ColorV on Vim.org](http://www.vim.org/scripts/script.php?script_id=3597) first.
 
 
-Download the latest version of [Galaxy on Vim.org](http://www.vim.org/scripts/script.php?script_id=3597)  
+Download the latest version of [Galaxy on Vim.org](http://www.vim.org/scripts/script.php?script_id=3729)  
 
 Extract to $VIMFILE folder. 
 

@@ -1,4 +1,4 @@
-*galaxy.txt* *galaxy*          Galaxy            Generate schemes with colors
+*galaxy.txt* *galaxy.vim*         Galaxy          Generate scheme with color
                                           
   
                      ______      __                                    ~
@@ -18,28 +18,42 @@ CONTENTS                                         *galaxy-contents*
 ==============================================================================
 INTRO                                               *galaxy-intro*
 
-    *galaxy* is a vim colorscheme that generate schemes with colors.
+    *galaxy* is a colorscheme that generate schemes with colors.
 
     With this you can:
-        Simply get your desired colorscheme. 
+        Get your preferred colorscheme in a simplest way.
+            1.Input your scheme name
+            2.Choose your preferred color for background.
+        You got it.
 
     With this you get:
         5 built-in schemes.
-        Generate scheme with only one color.
-        Edit schemes in 5 colors.
-        Simply generate 100+ schemes with colorname-list.
+        1-color-to-scheme generator.
+        5-color to tune your schemes.
+        100+ schemes generate simply with colorname-list.
+        A window to choose schemes easily.
+
+        And...
         Terminal (256/16/8) support with all schemes.
-        StatusLine highlight with insert-enter.
-        Clearly diff mode color.
+        Insert-mode statusline hightlight.
+        Tab/Fold/Popmenu/Wild Menu/... with comfort balance.
+        Synatax colors with distinct contrast.
+        Diff colors clearly shows the diff texts.
         ...
 
     Take a glance: 
-        GUI  http://i55.tinypic.com/u0qh2.png
-        TERM http://i56.tinypic.com/2nr234y.png
+        Built-in Themes:
+            in GUI          http://i55.tinypic.com/u0qh2.png
+            in TERM(256)    http://i56.tinypic.com/2nr234y.png
+        Galaxy window:      http://i56.tinypic.com/153rzgp.png
 
     Where to start:     
         :colorscheme galaxy
         :Galaxy
+
+    NOTE: require vim plugin:ColorV
+    NOTE: If you have built a nice scheme and want to share it.
+          Post it at https://github.com/Rykka/vim-galaxy/issues 
     
 ------------------------------------------------------------------------------
 QUICKSTART                                          *galaxy-quickstart*
@@ -92,6 +106,9 @@ QUICKSTART                                          *galaxy-quickstart*
 
     NOTE    Terminal cursor may have bugs. 
             And only support "xterm\rxvt\screen\TMUX" now.
+            If Term color not work properly.
+            Please report your [OS,vim version,&t_Co,&term]
+            at https://github.com/Rykka/vim-galaxy/issues 
 ==============================================================================
 INSTALL                                          *galaxy-install*
 
@@ -101,12 +118,12 @@ INSTALL                                          *galaxy-install*
     `Bundle 'Rykka/vim-galaxy'` 
     `Bundle 'Rykka/ColorV'` 
     Run `:BundleInstall` to install.
-    And update ColorV easily by `:BundleInstall!`
+    And update them easily by `:BundleInstall!`
  
 2.Using [Galaxy on Vim.org]~
     You should download latest 'ColorV' at first.
     http://www.vim.org/scripts/script.php?script_id=3597
-    http://www.vim.org/scripts/script.php?script_id=3597
+    http://www.vim.org/scripts/script.php?script_id=3729
     Download the latest version of tar.gz file, 
     Extract to $VIMFILE folder. 
     ("~/.vim" for linux. "$HOME/vimfiles" for windows)
@@ -138,9 +155,12 @@ OPTIONS                                               *galaxy-options*
 DEVELOPER                                             *galaxy-developer*
 
     |Galaxy| is develped by Rykka Krin |<Rykka.Krin(at)gmail.com>|.
+
+    Thanks to lilydjwg for script to support Terminal cursor(Enter/Leave).
    
 ------------------------------------------------------------------------------
 HISTORY                                               *galaxy-history*
+" DONE: 110905  set undercurl to reverse_error in terminal mode
 "1.0.0
 " DONE: 110902  error of background lightness output 
 " DONE: 110901  add guisp for undercurl
