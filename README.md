@@ -4,43 +4,41 @@
 * With this you can:
 
         Get your preferred colorscheme in a simplest way.
+        
+        Press `<leader>glg` or input `:GalaxyGen`,then:
             1.Input your scheme name
             2.Choose your preferred color for background.
-        You got it.
+        You got a scheme!
+        And the manager is opened for further tuning.
 
-* With this you get:
+* With this you got:
 
         5 built-in schemes.
-        1-color-to-scheme generator.
-        5-color to tune your schemes.
-        100+ schemes generate simply with colorname-list.
-        A window to choose schemes easily.
-
-        And...
-        Terminal (256/16/8) support with all schemes.
-        Insert-mode statusline hightlight.
-        Tab/Fold/Popmenu/Wild Menu/... with comfort balance.
-        Synatax colors with distinct contrast.
-        Diff colors clearly shows the diff texts.
-        ...
+        100+ schemes generated simply with colorname-list.
+        Terminal (256/16/8) support for all schemes.
 
 **Take a glance:** 
 
-    Built-in Themes:
+* Built-in schemes:
 
-* in GUI          ![http://i55.tinypic.com/u0qh2.png](http://i55.tinypic.com/u0qh2.png)
+    - in GUI          ![http://i55.tinypic.com/u0qh2.png](http://i55.tinypic.com/u0qh2.png)
 
-* in TERM(256)    http://i56.tinypic.com/2nr234y.png
+    - in TERM(256)    http://i56.tinypic.com/2nr234y.png
 
-* Galaxy window   http://i56.tinypic.com/153rzgp.png
-   
-
+* Highligs:
+  
+    - A built-in:     http://imgur.com/s2Osg.png
+            
+    - A generated:    http://i.imgur.com/OpqR2.png
+      
 **where to start:**
 
         :colorscheme galaxy
         :Galaxy
 
-**NOTE**: require vim plugin:ColorV
+**NOTE**: Require vim plugin:ColorV
+            
+          http://www.vim.org/scripts/script.php?script_id=3597 
 
 **NOTE**: If you have built a nice scheme and want to share it.
 
@@ -49,6 +47,7 @@
 Load galaxy~
 
         :colorscheme galaxy
+        To use it persistently. Put it in your vimrc.
 
 Open galaxy manager window~
 
@@ -58,7 +57,7 @@ Open galaxy manager window~
 
 Generate new schemes~
 
-        'gn'
+        <leader>glg or :GalaxyGen
         Input your scheme's name.
         Then choose a color as the schemes background. then press 'q'
         To quit the choosing window. The schemes auto generated.
@@ -74,6 +73,7 @@ Edit your schemes~
 
 Generate schemes with colorlist~
 
+        Open ColorV built-in colorname list.
         <leader>cl or :ColorVlist
         You will got a colorlist window opened with W3C standard colorname.
         Put cursor in it. Then press '<leader>gla'
