@@ -1,37 +1,28 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3729
 
-    Galaxy is a colorscheme that generate schemes with colors.
-
-    With this you can:
-        Get your preferred colorscheme in a simplest way.
+    *galaxy* is a colorscheme that thousands shemes within.
+    
+    There are several built-in schemes.
+    You can get 100+ by ':GalaxyAuto' in a colorlist ':ColorVlist'.
+    Also you can define yours in simply by ':GalaxyNew'.
         
-        Press `<leader>glg` or input `:GalaxyGen`,then:
-            1.Input your scheme name
-            2.Choose your preferred color for background.
-        You got a scheme! 
-        And the manager is opened for further tuning.
+    There are |galaxy-terminal| support for all schemes .
 
-    With this you got:
-        5 built-in schemes.
-        100+ schemes generate simply with colorname-list.
-        Terminal (256/16/8) support with all schemes.
-        ...
+    Other features include: 
+        |galaxy-edit|, |galaxy-style|,
+        |galaxy-statusline-blink|, |galaxy-indent-highlight| ...
 
-    Take a glance: 
-        Built-in schemes:
-            in GUI          http://i55.tinypic.com/u0qh2.png
-            in TERM(256)    http://i56.tinypic.com/2nr234y.png
-        Highlights:
-            A built-in:     http://imgur.com/s2Osg.png
-            An auto generated:    http://i.imgur.com/OpqR2.png
+    To start:     
+        :Galaxy 
 
-    Where to start:     
-        <leader>gll or :Galaxy
+    To keep using it:
+        put this in your vimrc.
+        colorscheme galaxy
 
-    NOTE: Require vim plugin:ColorV
-          http://www.vim.org/scripts/script.php?script_id=3597 
-    NOTE: If you have built a nice scheme and want to share it.
-          Post it at https://github.com/Rykka/vim-galaxy/issues 
-          I can put it into built-in schemes or help me 
-          improving the Auto Generator.
+    Screenshot: http://rykka.is-programmer.com/posts/31819
+
+    Post issues at https://github.com/Rykka/vim-galaxy
+        
+    NOTE: ColorV required if download from github.
+          https://github.com/Rykka/ColorV
 
