@@ -1,28 +1,29 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3729
 
-    *galaxy* is a colorscheme that thousands shemes within.
+    *Galaxy* is a colorscheme tries to make colorscheming simpler.
     
-    There are several built-in schemes.
-    You can get 100+ by ':GalaxyAuto' in a colorlist ':ColorVlist'.
-    Also you can define yours in simply by ':GalaxyNew'.
-        
-    There are |galaxy-terminal| support for all schemes .
+    A nice colorscheme is good for our eyes (and display).
+    But generating one is not that easy.
+    When generating a colorschemes, you must dealing with lots of issues: 
+    colors, highlight groups, syntaxs, terminals...
 
-    Other features include: 
-        |galaxy-edit|, |galaxy-style|,
-        |galaxy-statusline-blink|, |galaxy-indent-highlight| ...
+    |Galaxy| tries to simplifiy these works. 
+    
+    It classifies highlights in 'bgd','fgd','syn','msg','dif' group,
+    and automatically generate these highlight colors with these 5 group's 
+    basic colors. And do other stuffs to finish highlighting.
 
-    To start:     
-        :Galaxy 
+    So, for one scheme, only 5 colors are needed.
 
-    To keep using it:
-        put this in your vimrc.
-        colorscheme galaxy
+    It contains several built-in schemes.
+    Also Scheme Window, Screen Window, Terminal Support, Stylish Statusline,
+    Indent Highlight and more...
 
-    Screenshot: http://rykka.is-programmer.com/posts/31819
+    Some Pictures:~
+
+        Normal (Git Dif) : http://img.ly/images/4154624/full
+        Screen & Scheme  : http://img.ly/images/4154631/full
+
 
     Post issues at https://github.com/Rykka/vim-galaxy
-        
-    NOTE: ColorV required if download from github.
-          https://github.com/Rykka/ColorV
 
